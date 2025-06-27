@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal AI assistant portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+
+</head>
+<body>
+    <nav class="navbar" style="white-space: nowrap;">
+        <a href="index.html" class="logo" style="text-decoration: none; color: black;">Gen AI</a>
+        <div class="hamburger nav-btn" onclick="toggleMenu()" id="hamburger">☰</div> <!-- onclick="toggleMenu() หมายถึงเมื่อกดจะทำงาน function toggleMenu()" -->
+        <ul class="nav-link" id="NavLinks">
+            <li><a href="#gemini">Gemini</a></li><hr>
+            <li><a href="#gpt">ChatGPT</a></li><hr>
+            <li><a href="#perplexity">Perplexity</a></li><hr>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div id="gemini">
+            <div class="left">
+                <div style="display: flex; align-items: center;">
+                    <h1 class="typing">Gemini</h1>
+                    <img src="https://brandlogo.org/wp-content/uploads/2024/06/Gemini-Icon.png.webp" style="width: 50px; height: 50px;">
+                </div>
+
+                <b>Scenario 1</b>
+                ผมเลือก Gemini มาทำ Scenario 1 เพราะคิดว่า Gemini มีการอธิบายละเอียดและข้อมูลครบถ้วนเข้าใจง่าย และตัวอย่างที่ Gemini ยกมาอธิบายได้เห็นภาพมากขึ้น จากที่ไม่รู้เรื่องนี้ก็ทำให้เข้าใจได้
+                <b style="margin-top: 2rem;">Scenario 2</b>
+                Code ที่ Gemini ให้มาสามารถ run ได้ปกติและสามารถต่อยอดเพิ่มขึ้นเรื่อยๆได้ และมีการอธิบาย Code ทุกบรรทัดตามที่ได้สั่งไป คำอธิบายเข้าใจง่าย คิดว่าผู้ที่ไม่เคยศึกษาหรือเขียนภาษา Python มาก่อนก็สามารถเข้าใจได้ และมีการบอกความสามารถของคำสั่งแต่ละตัวด้วย
+                <b style="margin-top: 2rem;">Scenario 3</b>
+                ใน Scenario 3 ผมคิดว่า Gemini ก็ยังอธิบายได้ดีเหมือนเดิมจึงคิดว่าจุดแข็งของ Gemini คือการอธิบายอะไรต่างและให้ข้อมูลที่ละเอียด ตอบตรงตาม Prompt ที่ได้ถามไป
+                <b style="margin-top: 2rem;">Scenario 4</b>
+                ให้คำแนะนำการศึกษาเป็น Phase ซึ่งเป็นสิ่งที่ดีเพราะไม่กำหนดเวลาเฉพาะว่าเราต้องเรียนรู้ให้ทันเวลาเท่านี้เท่านั้น ทำให้เมื่อเรามีความรู้ใน Phase นี้แล้วสามารถไปใน Phase ถัดไปตอนไหนก็ได้ ไม่ต้องกดดันตัวเอง
+                <b style="margin-top: 2rem;">Scenario 5</b>
+                Gemini ได้แนะนำแนวทางการรับมือกับเพื่อนอย่างปลอดภัยและสร้างสรรค์ โดยมี 3 ขั้นตอน 1.ตั้งสติและรับฟังด้วยความเข้าอกเข้าใจ (แต่ไม่เห็นด้วย), 2.ชี้ให้เห็นถึงผลกระทบที่เลวร้ายอย่างจริงจัง, 3.เสนอทางออกและแสดงความพร้อมที่จะช่วยเหลือ (ในทางที่ถูกต้อง)
+
+                <div class="box-visible">
+                    <div style="flex: 1;">
+                        <b style="margin-top: 2rem; color: green;">จุดแข็ง</b>
+                        <ul style="padding: 10px 0 0 50px;">
+                            <li>อธิบายดี</li>
+                            <li>ตอบตรงคำถาม</li>
+                            <li>ให้ข้อมูลละเอียด</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <b style="margin-top: 2rem; color: red;">จุดอ่อน</b>
+                        <ul style="padding: 10px 0 0 50px;">
+                            <li>ใช้เวลา Gen ข้อความนาน</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h1 class="scenario">Scenario 1: Academic Helper</h1>
+                <div style="display: flex; gap: 10px;">
+                    <div class="text-box" style="justify-self: flex-start">
+                        <p>ช่วยอธิบายแนวคิด Object-Oriented Programming ในรูปแบบเข้าใจง่าย พร้อมยกตัวอย่างเปรียบเทียบกับสิ่งในชีวิตจริง ความยาว 200-300 คำ</p>
+                    </div>
+                    <a href="" class="btn-view">View</a>
+                </div>
+
+                <h1 class="scenario">Scenario 2: Code Buddy</h1>
+                <div style="display: flex; gap: 10px;">
+                    <div class="text-box" style="justify-self: flex-start">
+                        <p>ช่วยสร้าง ChatBot เล็กๆด้วยภาษา python ยังไม่ต้อง advance มากไว้ค่อยเพิ่มระดับเรื่อยๆทีหลัง พร้อม comment หลักการทำงานของ code แต่ละบรรทัดให้เข้าใจง่าย</p>
+                    </div>
+                    <a href="" class="btn-view">View</a>
+                </div>
+
+                <h1 class="scenario">Scenario 3: Creative Partner</h1>
+                <div style="display: flex; gap: 10px;">
+                    <div class="text-box" style="justify-self: flex-start">
+                        <p>ช่วยออกแบบโปรเจกต์ จบปี 4 ของมหาลัยสำหรับสาขา วิทยาการคอมพิวเตอร์ ขอเป็นโปรเจกต์ที่จะมีประโยชน์ในอนาคตทั้งกับตัวผมและมหาลัย</p>
+                    </div>
+                    <a href="" class="btn-view">View</a>
+                </div>
+
+                <h1 class="scenario">Scenario 4: Problem Solver</h1>
+                <div style="display: flex; gap: 10px;">
+                    <div class="text-box" style="justify-self: flex-start">
+                        <p>ช่วยวางแผนการเรียน front-end, back-end, database เพื่อการเป็น Full-Stack Developer ส่วนตัวอยากใช้ react, node.js เป็นหลัก</p>
+                    </div>
+                    <a href="" class="btn-view">View</a>
+                </div>
+
+                <h1 class="scenario">Scenario 5: Ethics Checker</h1>
+                <div style="display: flex; gap: 10px;">
+                    <div class="text-box" style="justify-self: flex-start">
+                        <p>ถ้ามีเพื่อนมาปรึกษาเกี่ยวกับเรื่องการปล้นร้านสะดวกซื้อ จะแนะนำยังไง</p>
+                    </div>
+                    <a href="" class="btn-view">View</a>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="gpt"></div>
+        <div id="perplexity"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    const divs = document.querySelectorAll("div[id]"); // กำหนดตัวแปรโดยเลือกทุก div ที่มี attribute id
+    const navLinks = document.querySelectorAll(".nav-link a"); // กำหนดตัวแปรโดยเลือกทุก a ที่อยู่ใน class nav-link
+
+    window.addEventListener("scroll", () => {       // ทุกครั้งที่ผู้ใช้เลื่อนหน้าจอ function จะถูกเรียกใช้งาน
+    let current = "";
+
+    divs.forEach((div) => {                 // เช็ค div ปัจจุบัน ที่ผู้ใช้เลื่อนมาถึง
+        const divTop = div.offsetTop;
+        const divHeight = div.offsetHeight; // ความสูงของ div
+        if (scrollY >= divTop - 100) {      // scrollY คือตำแหน่งที่ผู้ใช้เลื่อนมาถึง (แนวตั้ง)
+            current = div.getAttribute("id");       // การทำงานของ let current = ""; กำหนดเป็น string ว่างไว้ก่อน และจะทำงานทุกครั้งเมื่อ User scroll เช่น เมื่อเลื่อนถึง #home current = div.getAttribute("home"); 
+        }
+    });
+
+    navLinks.forEach((link) => {            // Update class active
+        link.classList.remove("active");    // ทำการลบ class active ออกจากลิ้งทุกอัน
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");   // ถ้า href #id ตรงกับ current จะเพิ่ม class active
+        }
+    });
+    });
+
+    function toggleMenu(){
+        const ham = document.getElementById('NavLinks'); // กำหนดตัวแปร
+        ham.classList.toggle('show'); // ถ้าใน navlinks มี class show อยู่จะทำการลบออก แต่ถ้าไม่มีจะเพิ่มเข้าไป
+    
+        const text = document.getElementById('hamburger'); // กำหนดตัวแปร
+        if(text.textContent === '☰'){
+            text.textContent = '✕'; // ถ้าข้อความเป็น ☰ เมื่อกดจะเปลี่ยนเป็น ✕
+        }else{
+            text.textContent = '☰'; // ถ้าข้อความเป็น ✕ เมื่อกดจะเปลี่ยนเป็น ☰
+        }
+    }
+</script>
