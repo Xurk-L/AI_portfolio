@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking AI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+
+</head>
+<body>
+    <nav class="navbar" style="white-space: nowrap;">
+        <a href="index.html" class="logo" style="text-decoration: none; color: black;">Gen AI</a>
+        <div class="hamburger nav-btn" onclick="toggleMenu()" id="hamburger">☰</div> <!-- onclick="toggleMenu() หมายถึงเมื่อกดจะทำงาน function toggleMenu()" -->
+        <ul class="nav-link" id="NavLinks">
+            <li><a href="index.html#gemini">Gemini</a></li>
+            <li><a href="index.html#gpt">ChatGPT</a></li>
+            <li><a href="index.html#perplexity">Perplexity</a></li>
+            <li><a href="ranking.html">Ranking</a></li>
+        </ul>
+    </nav>
+
+    <div class="rank-container">
+        <table class="my-table" style="box-shadow: 3px 3px 10px black;">
+            <thead>
+                <tr>
+                    <th>เกณฑ์การประเมิน</th>
+                    <th>Gemini</th>
+                    <th>ChatGPT</th>
+                    <th>Perplexity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>เกณฑ์เข้าใจคำถาม (1-10)</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>คุณภาพการตอบ (1-10)</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>ความเป็นธรรมชาติของภาษา (1-10)</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>ความเร็วในการตอบ (1-10)</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>ความปลอดภัย/จริยธรรม (1-10)</td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>ความชอบส่วนตัว (1-10)</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>5</td>
+                </tr>
+                <tr style="font-weight: bold;">
+                    <td>รวม</td>
+                    <td>51</td>
+                    <td>55</td>
+                    <td>37</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 30px;">
+            <h1>My Review</h1>
+            <p>จากการทดลองและบันทึกข้อมูลในแต่ละสถานการณ์ทำให้ผมรู้ว่า AI 3 ตัวนี้ต่างกันอย่างไร โดยที่ผมจะเริ่มจากตัวแรก</p>
+            <p style="margin-bottom: 20px;"><p style="font-weight: bold;">Gemini</p> มีการอธิบายข้อมูลได้ละเอียดเหมาะแก่การให้อธิบายสิ่งต่างๆหรือให้ช่วยเรื่องการรับมือแก้ไขปัญหาต่างๆได้ เพราะ Gemini
+            จะบอกวิธีได้ละเอียดมาก อยากให้ตอบเร็วกว่านี้ แนะนำให้ใช้ Gemini ในการอธิบายข้อมูลต่างๆ</p>
+            <hr>
+            <p style="margin-bottom: 20px;"><p style="font-weight: bold;">ChatGPT</p> มีการ Gen ข้อความได้รวดเร็วและเขียนโค้ดได้ดีสั้นกระชับและใช้งานได้แต่มี Comment น้อย ChatGPT จึงเหมาะกับการใช้วิเคราะห์ Code 
+            และช่วยแก้ไข Code ควรมีการอธิบายมากขึ้น แนะนำให้ใช้ ChatGPT ช่วยเรื่องการเขียน Code</p>
+            <hr>
+            <p style="margin-bottom: 20px;"><p style="font-weight: bold;">Perplexity</p> จะแนบลิ้งทุกครั้งที่ตอบคำถามจึงเหมาะแก่คนที่ต้องการที่มาของข้อมูล หรือใช้ Perplexity ช่วยค้นหาเว็ปที่ใช้ในการศึกษาเรื่องต่างๆได้
+            บางครั้งไม่เข้าใจคำถาม คิดว่าไม่แนะนำเพราะใช้ AI ตัวอื่นแทนได้</p>
+        </div>
+    </div>
+    <hr style="margin: 3rem 0;">
+
+    <div class="container">
+        <div class="content-box">
+            <div class="left-r">
+                <h1>หลักการใช้งาน AI</h1>
+                <ul style="list-style: decimal;">
+                    <li>การเคารพลิขสิทธิ์ - ไม่ให้ AI สร้างงานละเมิดลิขสิทธิ์</li>
+                    <li>ใช้เพื่อช่วยไม่ใช่ทำแทน - ใช้ AI ในการช่วยอธิบายเรื่องงานหรืออธิบายโค้ดแทนการให้มาทำแทนไปเลย</li>
+                    <li>จริยธรรม - ไม่ใช้ละเมิดจริยธรรมหรือละเมิดกฏหมายต่างๆ</li>
+                    <li>ความรับผิดชอบ - จะตรวจสอบทุกครั้งก่อนนำข้อมูลมาใช้</li>
+                    <li>เคารพความเป็นส่วนตัวของผู้อื่น - ไม่นำข้อมูลผู้อื่นมาใช้งานโดยไม่ได้รับอนุญาติ</li>
+                    <li>ใช้เพื่อหาความรู้ - ผมจะใช้  AI เพื่อหาความรู้และปรึกษาเรื่องต่างๆเป็นส่วนใหญ่</li>
+                    <li>ไม่รู้จริงๆถึงจะถาม - ผมอยากจะหาความรู้ด้วยตัวเองก่อนจะถาม</li>
+                    <li>ถามวิธีการทำงานด้วย - ทุกครั้งที่ถามผมจะให้ AI อธิบายหลักการทำงานมาด้วย</li>
+                    <li>ขอคำแนะนำ - ผมจะให้ AI ในนำในเรื่องต่างๆ ที่ผมต้องการจะเรียนรู้เสมอ</li>
+                    <li>ฝึกใช้ชีวิตร่วมกับ AI - ปัจจุบัน AI มีบทมากในหลายๆเรื่อง ผมจึงต้องพัฒนาตามให้ทัน</li>
+                </ul>
+            </div>
+            <div class="right-r">
+                <h1>แผนการใช้งาน AI ในอนาคต</h1>
+                <div>
+                    <p>จะใช้ AI ช่วยในการเรียนอย่างไร</p>
+                    <span>- ให้ AI คอยให้คำแนะนำการเรียนว่าควรเริ่มยังไงดี และให้คำแนะนำระหว่างทางไปด้วย</span><hr>
+                    <p>AI ตัวไหนจะเป็นหลักในแต่ละงาน</p>
+                    <span>- Gemini - การอธิบายข้อมูลและช่วยตรวจสอบข้อความต่างๆ ChatGPT - การวิเคราะห์โค้ดและเป็นที่ปรึกษาการเขียนโปรแกรม
+                        ทักษะอะไรที่ต้องพัฒนาเพิ่มเติม
+                    </span><hr>
+                    <p>ทักษะอะไรที่ต้องพัฒนาเพิ่มเติม</p>
+                    <span>- การใช้ Prompt ที่เจาะจงมากกว่านี้เพราะผมต้องการงานที่มีความเม่นยำมากขึ้น</span><hr>
+                    <p>เป้าหมายการเรียนรู้ AI ต่อไป</p>
+                    <span>- ฝึกการใช้ Prompt ให้คล่อง</span><hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function toggleMenu(){
+        const ham = document.getElementById('NavLinks'); // กำหนดตัวแปร
+        ham.classList.toggle('show'); // ถ้าใน navlinks มี class show อยู่จะทำการลบออก แต่ถ้าไม่มีจะเพิ่มเข้าไป
+    
+        const text = document.getElementById('hamburger'); // กำหนดตัวแปร
+        if(text.textContent === '☰'){
+            text.textContent = '✕'; // ถ้าข้อความเป็น ☰ เมื่อกดจะเปลี่ยนเป็น ✕
+        }else{
+            text.textContent = '☰'; // ถ้าข้อความเป็น ✕ เมื่อกดจะเปลี่ยนเป็น ☰
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll('.nav-link a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === 'ranking.html' && 
+                window.location.pathname.endsWith('ranking.html')) {
+            link.classList.add('active');
+            }
+        });
+    });
+</script>
