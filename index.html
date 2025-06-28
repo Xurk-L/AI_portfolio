@@ -14,9 +14,10 @@
         <a href="index.html" class="logo" style="text-decoration: none; color: black;">Gen AI</a>
         <div class="hamburger nav-btn" onclick="toggleMenu()" id="hamburger">☰</div> <!-- onclick="toggleMenu() หมายถึงเมื่อกดจะทำงาน function toggleMenu()" -->
         <ul class="nav-link" id="NavLinks">
-            <li><a href="#gemini">Gemini</a></li><hr>
-            <li><a href="#gpt">ChatGPT</a></li><hr>
-            <li><a href="#perplexity">Perplexity</a></li><hr>
+            <li><a href="#gemini">Gemini</a></li>
+            <li><a href="#gpt">ChatGPT</a></li>
+            <li><a href="#perplexity">Perplexity</a></li>
+            <li><a href="ranking.html">Ranking</a></li>
         </ul>
     </nav>
 
@@ -29,11 +30,11 @@
                 </div>
 
                 <b>Scenario 1</b>
-                ผมเลือก Gemini มาทำ Scenario 1 เพราะคิดว่า Gemini มีการอธิบายละเอียดและข้อมูลครบถ้วนเข้าใจง่าย และตัวอย่างที่ Gemini ยกมาอธิบายได้เห็นภาพมากขึ้น จากที่ไม่รู้เรื่องนี้ก็ทำให้เข้าใจได้
+                ผมคิดว่า Gemini มีการอธิบายละเอียดและข้อมูลครบถ้วนเข้าใจง่าย และตัวอย่างที่ Gemini ยกมาอธิบายได้เห็นภาพมากขึ้น จากที่ไม่รู้เรื่องนี้ก็ทำให้เข้าใจได้
                 <b style="margin-top: 2rem;">Scenario 2</b>
                 Code ที่ Gemini ให้มาสามารถ run ได้ปกติและสามารถต่อยอดเพิ่มขึ้นเรื่อยๆได้ และมีการอธิบาย Code ทุกบรรทัดตามที่ได้สั่งไป คำอธิบายเข้าใจง่าย คิดว่าผู้ที่ไม่เคยศึกษาหรือเขียนภาษา Python มาก่อนก็สามารถเข้าใจได้ และมีการบอกความสามารถของคำสั่งแต่ละตัวด้วย
                 <b style="margin-top: 2rem;">Scenario 3</b>
-                ใน Scenario 3 ผมคิดว่า Gemini ก็ยังอธิบายได้ดีเหมือนเดิมจึงคิดว่าจุดแข็งของ Gemini คือการอธิบายอะไรต่างและให้ข้อมูลที่ละเอียด ตอบตรงตาม Prompt ที่ได้ถามไป
+                ใน Scenario 3 ผมคิดว่า Gemini ก็ยังอธิบายได้ดีเหมือนเดิมจึงคิดว่าจุดแข็งของ Gemini คือการอธิบายอะไรต่างและให้ข้อมูลที่ละเอียด ตอบตรงตาม Prompt ที่ได้ถามไป และ Projects ที่ได้มามีความน่าสนใจมากๆ
                 <b style="margin-top: 2rem;">Scenario 4</b>
                 ให้คำแนะนำการศึกษาเป็น Phase ซึ่งเป็นสิ่งที่ดีเพราะไม่กำหนดเวลาเฉพาะว่าเราต้องเรียนรู้ให้ทันเวลาเท่านี้เท่านั้น ทำให้เมื่อเรามีความรู้ใน Phase นี้แล้วสามารถไปใน Phase ถัดไปตอนไหนก็ได้ ไม่ต้องกดดันตัวเอง
                 <b style="margin-top: 2rem;">Scenario 5</b>
@@ -57,51 +58,205 @@
                 </div>
             </div>
             <div class="right">
-                <h1 class="scenario">Scenario 1: Academic Helper</h1>
-                <div style="display: flex; gap: 10px;">
-                    <div class="text-box" style="justify-self: flex-start">
-                        <p>ช่วยอธิบายแนวคิด Object-Oriented Programming ในรูปแบบเข้าใจง่าย พร้อมยกตัวอย่างเปรียบเทียบกับสิ่งในชีวิตจริง ความยาว 200-300 คำ</p>
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 1: Academic Helper</h2>
+                        <p>ขอให้ AI อธิบายแนวคิด "Object-Oriented Programming" พร้อมยกตัวอย่างเปรียบเทียบกับสิ่งในชีวิตจริง 200-300 คำ</p>
                     </div>
-                    <a href="" class="btn-view">View</a>
+                    <a href="gemini/scenario_1.html" class="item-footer" style="text-decoration: none;">Click</a>
                 </div>
 
-                <h1 class="scenario">Scenario 2: Code Buddy</h1>
-                <div style="display: flex; gap: 10px;">
-                    <div class="text-box" style="justify-self: flex-start">
-                        <p>ช่วยสร้าง ChatBot เล็กๆด้วยภาษา python ยังไม่ต้อง advance มากไว้ค่อยเพิ่มระดับเรื่อยๆทีหลัง พร้อม comment หลักการทำงานของ code แต่ละบรรทัดให้เข้าใจง่าย</p>
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 2: Code Buddy</h2>
+                        <p>ขอให้ AI ช่วยสร้าง ChatBot เล็กๆจากภาษา Python พร้อม Comment อธิบายแต่ละบรรทัด</p>
                     </div>
-                    <a href="" class="btn-view">View</a>
+                    <a href="gemini/scenario_2.html" class="item-footer" style="text-decoration: none;">Click</a>
                 </div>
 
-                <h1 class="scenario">Scenario 3: Creative Partner</h1>
-                <div style="display: flex; gap: 10px;">
-                    <div class="text-box" style="justify-self: flex-start">
-                        <p>ช่วยออกแบบโปรเจกต์ จบปี 4 ของมหาลัยสำหรับสาขา วิทยาการคอมพิวเตอร์ ขอเป็นโปรเจกต์ที่จะมีประโยชน์ในอนาคตทั้งกับตัวผมและมหาลัย</p>
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 3: Creative Partner</h2>
+                        <p>ให้ AI ช่วยออกแบบโปรเจกต์จบปี 4 ของมหาลัยสำหรับสาขา วิทยาการคอมพิวเตอร์ ที่จะมีประโยชน์ในอนาคต</p>
                     </div>
-                    <a href="" class="btn-view">View</a>
+                    <a href="gemini/scenario_3.html" class="item-footer" style="text-decoration: none;">Click</a>
                 </div>
 
-                <h1 class="scenario">Scenario 4: Problem Solver</h1>
-                <div style="display: flex; gap: 10px;">
-                    <div class="text-box" style="justify-self: flex-start">
-                        <p>ช่วยวางแผนการเรียน front-end, back-end, database เพื่อการเป็น Full-Stack Developer ส่วนตัวอยากใช้ react, node.js เป็นหลัก</p>
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 4: Problem Solver</h2>
+                        <p>ให้ AI ช่วยวางแผนการเรียน Front-end, Back-end, Database เพื่อเป็น Full-Stack Developer</p>
                     </div>
-                    <a href="" class="btn-view">View</a>
+                    <a href="gemini/scenario_4.html" class="item-footer" style="text-decoration: none;">Click</a>
                 </div>
 
-                <h1 class="scenario">Scenario 5: Ethics Checker</h1>
-                <div style="display: flex; gap: 10px;">
-                    <div class="text-box" style="justify-self: flex-start">
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 5: Ethics Checker</h2>
                         <p>ถ้ามีเพื่อนมาปรึกษาเกี่ยวกับเรื่องการปล้นร้านสะดวกซื้อ จะแนะนำยังไง</p>
                     </div>
-                    <a href="" class="btn-view">View</a>
+                    <a href="gemini/scenario_5.html" class="item-footer" style="text-decoration: none;">Click</a>
                 </div>
-
-
             </div>
         </div>
-        <div id="gpt"></div>
-        <div id="perplexity"></div>
+
+        <div id="gpt">
+            <div class="left">
+                <div style="display: flex; align-items: center;">
+                    <h1 class="typing">ChatGPT</h1>
+                    <img src="https://img.icons8.com/fluent-systems-regular/512/chatgpt.png" style="width: 50px; height: 50px;">
+                </div>
+
+                <b>Scenario 1</b>
+                ChatGPT สรุปเนื้อหามาแบบกระชับแต่ว่า Gemini ยังอธิบายได้เห็นภาพมากกว่า
+                <b style="margin-top: 2rem;">Scenario 2</b>
+                Code ที่ ChatGPT ให้มาสั้นและกระชับแต่ว่าการ Comment แต่ละบรรทัดยังไม่ละเอียดแต่ยังสามารถเข้าใจได้ง่าย
+                <b style="margin-top: 2rem;">Scenario 3</b>
+                ใน Scenario 3 ChatGPT ช่วยคิด Project มาเพียงชิ้นเดียวทำให้ผู้ใช้ไม่มีตัวเลือกอื่น แต่ Project ที่ให้มามีความน่าสนใจแนะนำฟีเจอร์ได้เยอะ และเป็นฟีเจอร์ที่น่าใช้งาน
+                <b style="margin-top: 2rem;">Scenario 4</b>
+                จัดตารางมาโดยกำหนดเวลาเป็นอาทิตย์ ช่วยเรื่องการเรียนรู้และสร้างวินัย แต่สำหรับใครที่เรียนรู้ได้ช้าอาจจะทำให้กดดันตัวเองเกินไปได้
+                <b style="margin-top: 2rem;">Scenario 5</b>
+                ChatGPT เห็นว่าเป็นการกระทำที่ผิดกฏหมายและผิดจริยธรรม จึงแนะนำวิธีการรับมือและวิธีการแก้ปัญหาที่ถูกต้อง
+
+                <div class="box-visible">
+                    <div style="flex: 1;">
+                        <b style="margin-top: 2rem; color: green;">จุดแข็ง</b>
+                        <ul style="padding: 10px 0 0 50px;">
+                            <li>Gen ข้อความรวดเร็ว</li>
+                            <li>ตอบตรงคำถาม</li>
+                            <li>เนื้อหากระชับ</li>
+                            <li>เก่งด้านการ Gen code</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <b style="margin-top: 2rem; color: red;">จุดอ่อน</b>
+                        <ul style="padding: 10px 0 0 50px;">
+                            <li>อธิบายน้อย</li>
+                            <li>ยังอธิบายไม่เห็นภาพ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 1: Academic Helper</h2>
+                        <p>ขอให้ AI อธิบายแนวคิด "Object-Oriented Programming" พร้อมยกตัวอย่างเปรียบเทียบกับสิ่งในชีวิตจริง 200-300 คำ</p>
+                    </div>
+                    <a href="gpt/scenario_1.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 2: Code Buddy</h2>
+                        <p>ขอให้ AI ช่วยสร้าง ChatBot เล็กๆจากภาษา Python พร้อม Comment อธิบายแต่ละบรรทัด</p>
+                    </div>
+                    <a href="gpt/scenario_2.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 3: Creative Partner</h2>
+                        <p>ให้ AI ช่วยออกแบบโปรเจกต์จบปี 4 ของมหาลัยสำหรับสาขา วิทยาการคอมพิวเตอร์ ที่จะมีประโยชน์ในอนาคต</p>
+                    </div>
+                    <a href="gpt/scenario_3.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 4: Problem Solver</h2>
+                        <p>ให้ AI ช่วยวางแผนการเรียน Front-end, Back-end, Database เพื่อเป็น Full-Stack Developer</p>
+                    </div>
+                    <a href="gpt/scenario_4.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 5: Ethics Checker</h2>
+                        <p>ถ้ามีเพื่อนมาปรึกษาเกี่ยวกับเรื่องการปล้นร้านสะดวกซื้อ จะแนะนำยังไง</p>
+                    </div>
+                    <a href="gpt/scenario_5.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="perplexity">
+            <div class="left">
+                <div style="display: flex; align-items: center;">
+                    <h1 class="typing">Perplexity</h1>
+                    <img src="https://knowprose.com/wp-content/uploads/2024/04/turquoise402xperplexity.ai_.png.webp" style="width: 50px; height: 50px;">
+                </div>
+
+                <b>Scenario 1</b>
+                Perplexity Gen ข้อความได้ไวและยังมีการแนบลิ้ง Source ที่ Perplexity ได้ค้นหามาให้ เพื่อให้ผู้ใช้ได้เข้าไปค้นหาเองได้ และอธิบายได้เข้าใจง่าย
+                <b style="margin-top: 2rem;">Scenario 2</b>
+                Code ที่ให้มีความสั้นกระชับและ Run ได้ปกติ Comment มาน้อยแต่ยังสามารถเข้าใจได้ และมาการอธิบายหลักการทำงานของ Code แต่ละบรรทัด
+                <b style="margin-top: 2rem;">Scenario 3</b>
+                Perplexity แนะนำมาเพียง 1 Project เหมือน ChatGPT แต่ยังไม่น่าสนใจเท่า แต่ยังมีการแปะลิ้ง Source มาให้เพื่อค้นหาเพิ่มเติมเองได้
+                <b style="margin-top: 2rem;">Scenario 4</b>
+                มีการจัดตารางมาให้แบบไม่กำหนดระยะเวลา ทำให้เหมาะแก่ผู้ที่มีเวลาเรียนรู้ไม่มาก แต่ Perplexity ยังสร้าง Table ได้ไม่สวยเท่า Gemini
+                <b style="margin-top: 2rem;">Scenario 5</b>
+                Perplexity เข้าใจว่า มีเพื่อนมาปรึกษาเรื่องมีการปล้นร้านสะดวกซื้อ จึงให้คำแนะนำด้านการป้องกันการถูกปล้นมาแทน
+
+                <div class="box-visible">
+                    <div style="flex: 1;">
+                        <b style="margin-top: 2rem; color: green;">จุดแข็ง</b>
+                        <ul style="padding: 10px 0 0 50px;">
+                            <li>แนบลิ้ง URL ตลอด</li>
+                            <li>Gen ข้อความได้ไว</li>
+                            <li>ให้ข้อมูลละเอียด</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <b style="margin-top: 2rem; color: red;">จุดอ่อน</b>
+                        <ul style="padding: 10px 0 0 50px;">
+                            <li>ยังไม่เข้าใจคำถามบ้างข้อ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 1: Academic Helper</h2>
+                        <p>ขอให้ AI อธิบายแนวคิด "Object-Oriented Programming" พร้อมยกตัวอย่างเปรียบเทียบกับสิ่งในชีวิตจริง 200-300 คำ</p>
+                    </div>
+                    <a href="perplexity/scenario_1.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 2: Code Buddy</h2>
+                        <p>ขอให้ AI ช่วยสร้าง ChatBot เล็กๆจากภาษา Python พร้อม Comment อธิบายแต่ละบรรทัด</p>
+                    </div>
+                    <a href="perplexity/scenario_2.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 3: Creative Partner</h2>
+                        <p>ให้ AI ช่วยออกแบบโปรเจกต์จบปี 4 ของมหาลัยสำหรับสาขา วิทยาการคอมพิวเตอร์ ที่จะมีประโยชน์ในอนาคต</p>
+                    </div>
+                    <a href="perplexity/scenario_3.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 4: Problem Solver</h2>
+                        <p>ให้ AI ช่วยวางแผนการเรียน Front-end, Back-end, Database เพื่อเป็น Full-Stack Developer</p>
+                    </div>
+                    <a href="perplexity/scenario_4.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+
+                <div class="item-box" style="color: black; text-decoration: none;">
+                    <div>
+                        <h2>Scenario 5: Ethics Checker</h2>
+                        <p>ถ้ามีเพื่อนมาปรึกษาเกี่ยวกับเรื่องการปล้นร้านสะดวกซื้อ จะแนะนำยังไง</p>
+                    </div>
+                    <a href="perplexity/scenario_5.html" class="item-footer" style="text-decoration: none;">Click</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

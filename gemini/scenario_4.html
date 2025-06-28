@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario 4: Problem Solver</title>
+
+    <link rel="stylesheet" href="../scenario.css">
+    <link rel="stylesheet" href="../nav.css">
+    
+</head>
+<body>
+    <nav class="navbar" style="white-space: nowrap;">
+        <a href="index.html" class="logo" style="text-decoration: none; color: black;">Gemini</a>
+        <div class="hamburger nav-btn" onclick="toggleMenu()" id="hamburger">☰</div> <!-- onclick="toggleMenu() หมายถึงเมื่อกดจะทำงาน function toggleMenu()" -->
+        <ul class="nav-link" id="NavLinks">
+            <li><a href="../index.html#gemini">Gemini</a></li>
+            <li><a href="../index.html#gpt">ChatGPT</a></li>
+            <li><a href="../index.html#perplexity">Perplexity</a></li>
+            <li><a href="ranking.html">Ranking</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Scenario 4: Problem Solver</h1>
+            <div class="text-content">
+                <span><p>Prompt ที่ถาม </p>: ช่วยวางแผนการเรียน front-end, back-end, database เพื่อการเป็น Full-Stack Developer ส่วนตัวอยากใช้ react, node.js เป็นหลัก</span><br>
+                <span><p>ความคิดเห็น </p>: Gemini จัดตารางมาเป็น Phase แบบไม่กำหนดระยะเวลาว่าต้องฝึกเรื่องนี้ภายในเวลาเท่านี้ ทำให้ผู้ใช้ไม่เกิดการกดดัน แต่การจัดตารางมาเป็นระยะเวลาก็มีข้อดีทำให้ผู้ใช้มีวินัยในตัวเองมากยิ่งขึ้น
+                    จึงคิดว่าการแนะนำของ Gemini เหมาะกับผู้ที่มีเวลาเรียนรู้วันละไม่มากแต่ต้องการผู้ช่วยที่จะจัดตารางการเรียนให้
+                </span>
+                <span><p>เปรียบเทียบกับตัวอื่น </p>: Gemini จัดตารางแบบไม่กำหนดเวลา และจัดตารางการเรียนได้ดี</span>
+            </div>
+
+            <div class="img-content">
+                <img src="../img/gemini/solving_1.png" alt="">
+                <img src="../img/gemini/solving_2.png" alt="">
+                <img src="../img/gemini/solving_3.png" alt="">
+                <img src="../img/gemini/solving_4.png" alt="">
+                <img src="../img/gemini/solving_5.png" alt="">
+                <img src="../img/gemini/solving_6.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const divs = document.querySelectorAll("div[id]"); // กำหนดตัวแปรโดยเลือกทุก div ที่มี attribute id
+    const navLinks = document.querySelectorAll(".nav-link a"); // กำหนดตัวแปรโดยเลือกทุก a ที่อยู่ใน class nav-link
+
+    window.addEventListener("scroll", () => {       // ทุกครั้งที่ผู้ใช้เลื่อนหน้าจอ function จะถูกเรียกใช้งาน
+    let current = "";
+
+    divs.forEach((div) => {                 // เช็ค div ปัจจุบัน ที่ผู้ใช้เลื่อนมาถึง
+        const divTop = div.offsetTop;
+        const divHeight = div.offsetHeight; // ความสูงของ div
+        if (scrollY >= divTop - 100) {      // scrollY คือตำแหน่งที่ผู้ใช้เลื่อนมาถึง (แนวตั้ง)
+            current = div.getAttribute("id");       // การทำงานของ let current = ""; กำหนดเป็น string ว่างไว้ก่อน และจะทำงานทุกครั้งเมื่อ User scroll เช่น เมื่อเลื่อนถึง #home current = div.getAttribute("home"); 
+        }
+    });
+
+    navLinks.forEach((link) => {            // Update class active
+        link.classList.remove("active");    // ทำการลบ class active ออกจากลิ้งทุกอัน
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");   // ถ้า href #id ตรงกับ current จะเพิ่ม class active
+        }
+    });
+    });
+
+    function toggleMenu(){
+        const ham = document.getElementById('NavLinks'); // กำหนดตัวแปร
+        ham.classList.toggle('show'); // ถ้าใน navlinks มี class show อยู่จะทำการลบออก แต่ถ้าไม่มีจะเพิ่มเข้าไป
+    
+        const text = document.getElementById('hamburger'); // กำหนดตัวแปร
+        if(text.textContent === '☰'){
+            text.textContent = '✕'; // ถ้าข้อความเป็น ☰ เมื่อกดจะเปลี่ยนเป็น ✕
+        }else{
+            text.textContent = '☰'; // ถ้าข้อความเป็น ✕ เมื่อกดจะเปลี่ยนเป็น ☰
+        }
+    }
+</script>
